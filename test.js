@@ -9,12 +9,12 @@
 // ? Вивести відповідь із запитанням ("Поставлене запитання - question.
 // ?  Шар думає, що - answer")
 
+let answer = "";
+let question = prompt(
+  "Запитай мене щось. P.S. Лише питання закритого типу тварюко!))"
+);
 let i = "";
-for (i = 0; i <= 10; i = i) {
-  let question = prompt(
-    "Запитай мене щось. P.S. Лише питання закритого типу тварюко!))"
-  );
-  let answer = "";
+for (i = 0; answer === null; i = i) {
   const random = Math.floor(Math.random() * 6);
   switch (random) {
     case 0:
@@ -32,7 +32,6 @@ for (i = 0; i <= 10; i = i) {
     case 4:
       answer = `"Я зеленого поняття не маю про що мова =)`;
       break;
-  
     default:
       answer = "Перезавантаж сторінку скотиняко, будь ласка";
       break;
@@ -40,6 +39,4 @@ for (i = 0; i <= 10; i = i) {
   alert(
     `Мольфар Єфродозій віщає що - ${answer} (Поставлене запитання - ${question}.)`
   );
-
 }
-
