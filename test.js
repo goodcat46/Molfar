@@ -10,11 +10,11 @@
 // ?  Шар думає, що - answer")
 
 let answer = "";
-let question = prompt(
-  "Запитай мене щось. P.S. Лише питання закритого типу тварюко!))"
-);
 let i = "";
-for (i = 0; answer === null; i = i) {
+for (i = 0; i <=5; i = i) {
+  let question = prompt(
+    "Запитай мене щось. P.S. Лише питання закритого типу тварюко!))"
+    );
   const random = Math.floor(Math.random() * 6);
   switch (random) {
     case 0:
@@ -33,7 +33,7 @@ for (i = 0; answer === null; i = i) {
       answer = `"Я зеленого поняття не маю про що мова =)`;
       break;
     default:
-      answer = "Перезавантаж сторінку скотиняко, будь ласка";
+      answer = "Перезавантаж сторінку скотиняко, будь ласка. Або тицьни ОК";
       break;
   }
   alert(
