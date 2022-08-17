@@ -18,10 +18,10 @@ for (i = 0; i <= 10; i = i) {
   const random = Math.floor(Math.random() * 6);
   switch (random) {
     case 0:
-      answer = "Донт ворі бі хеппі";
+      answer = "Прислухайся свого серця!";
       break;
     case 1:
-      answer = "Ну такоЕ!";
+      answer = "Ееееее.... а біс його знає!";
       break;
     case 2:
       answer = "Я краще змовчу";
@@ -38,7 +38,7 @@ for (i = 0; i <= 10; i = i) {
       break;
   }
   alert(
-    `Поставлене запитання - ${question}. Мольфар Єфродозій віщає що - ${answer}`
+    `Мольфар Єфродозій віщає що - ${answer} (Поставлене запитання - ${question}.)`
   );
 
 }
