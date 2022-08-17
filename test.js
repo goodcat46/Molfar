@@ -12,10 +12,10 @@
 let answer = "";
 let i = "";
 for (i = 0; i <=5; i = i) {
+  const random = Math.floor(Math.random() * 6);
   let question = prompt(
     "Запитай мене щось. P.S. Лише питання закритого типу тварюко!))"
     );
-  const random = Math.floor(Math.random() * 6);
   switch (random) {
     case 0:
       answer = "Прислухайся свого серця!";
