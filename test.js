@@ -8,35 +8,52 @@
 // ? def - 'Я нічого про цк не знаю'
 // ? Вивести відповідь із запитанням ("Поставлене запитання - question.
 // ?  Шар думає, що - answer")
-
+let question = "";
 let answer = "";
 let i = "";
-for (i = 0; i <=5; i = i) {
-  const random = Math.floor(Math.random() * 6);
-  let question = prompt(
-    "Запитай мене щось. P.S. Лише питання закритого типу тварюко!))"
-    );
-  switch (random) {
-    case 0:
-      answer = "Прислухайся свого серця!";
-      break;
-    case 1:
-      answer = "Ееееее.... а біс його знає!";
-      break;
-    case 2:
-      answer = "Я краще змовчу";
-      break;
-    case 3:
-      answer = `"До поки сонце сяєє, до поки ....." ну далі ти знаєш`;
-      break;
-    case 4:
-      answer = `"Я зеленого поняття не маю про що мова =)`;
-      break;
-    default:
-      answer = "Перезавантаж сторінку скотиняко, будь ласка. Або тицьни ОК";
-      break;
-  }
-  alert(
-    `Мольфар Єфродозій віщає що - ${answer} (Поставлене запитання - ${question}.)`
-  );
+
+let getGame = confirm("Тебе щось тривожить дитино моя?");
+
+switch (getGame) {
+  case false:
+    alert("То якого ... ти сюди приперлось?");
+    break;
+  case true:
+    for (i = 0; i <= 5; i += 1) {
+      question = prompt(
+        "Що ж тривожить твою гнилу душу? (лише питання закритого типу)"
+      );
+      switch (question) {
+        case null:
+          alert("Не ігнор мене падлюко! Нужбо задавай питання! Тільки не став ПРОБІЛ");
+          break;
+        case " ":
+          alert("Господи! Яке ж воно кончене ...");
+          break;
+        default:
+          const random = Math.floor(Math.random() * 6);
+          switch (random) {
+            case 0:
+              answer = "Прислухайся свого серця!";
+              break;
+            case 1:
+              answer = "Ееееее.... а біс його знає!";
+              break;
+            case 2:
+              answer = "Таке дурне тільки ти можеш запитати ...";
+              break;
+            case 3:
+              answer = `"До поки сонце сяєє, до поки ....." ну далі ти знаєш`;
+              break;
+            case 4:
+              answer = `"Я зеленого поняття не маю про що мова =)`;
+              break;
+          }
+          alert(
+            `Мольфар Єфродозій віщає що - ${answer} (Поставлене запитання - ${question}???.)`
+          );
+          break;
+      }
+    }
+    break;
 }
